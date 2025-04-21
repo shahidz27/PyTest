@@ -1,4 +1,6 @@
+
 import pytest
+pytestmark = [pytest.mark.smoke,pytest.mark.strtest]
 
 
 def test_str01():
@@ -8,6 +10,7 @@ def test_str01():
     assert s1 == 'I like python automation'
     assert s1 + str(num) == 'I like python automation2.25'
 @pytest.mark.sanity
+@pytest.mark.str
 def test_str02():
     letters = 'abcdefghijklmnopqrstuvwxyz'
     assert len(letters) == 26
